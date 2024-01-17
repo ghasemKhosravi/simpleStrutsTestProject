@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="productManage" extends="struts-default">
+        <action name="LoginAction" class="com.project.action.LoginAction">
+            <result name="success" type="redirect">WellcomeAction</result>
+            <result name="input">/login.jsp</result>
+        </action>
+        <action name="RegisterAction" class="com.project.action.RegisterAction">
+            <result name="success" type="redirect">WellcomeAction</result>
+            <result name="input">/register.jsp</result>
+        </action>
+        <action name="WellcomeAction" class="com.project.action.WellcomeAction">
+            <result name="success">/wellcome.jsp</result>
+        </action>
+        <action name="AddAction" class="com.project.action.AddAction">
+            <result name="success" type="redirect">WellcomeAction</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="loadInfoAction" class="com.project.action.LoadInfoAction">
+            <result name="success">/updateProduct.jsp</result>
+        </action>
+        <action name="UpdateProdcut" class="com.project.action.UpdateProduct">
+            <result name="success" type="redirect">WellcomeAction</result>
+        </action>
+        <action name="DeleteAction" class="com.project.action.DeleteAction">
+            <result name="success" type="redirect">WellcomeAction</result>
+        </action>
+    </package>
+</struts>
